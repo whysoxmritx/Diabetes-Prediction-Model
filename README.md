@@ -28,7 +28,3 @@ This project implements a **Machine Learning model** that predicts whether a per
 3. Train the SVM classifier.  
 4. Evaluate accuracy on training and test data.  
 5. Build a prediction system to classify new input data.  
-
----
-ithub.com/your-username/diabetes-prediction-svm.git
-   cd diabetes-prediction-svm
