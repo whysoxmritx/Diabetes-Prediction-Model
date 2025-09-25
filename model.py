@@ -8,20 +8,11 @@ from sklearn.metrics import accuracy_score
 # PIMA(Prime Indian Diabetes Dataset)
 # loading the diabetes dataset to a pandas Dataframe
 diabetes_dataset=pd.read_csv('diabetes.csv')
-# print(diabetes_dataset)
-# print(diabetes_dataset.head())
-#   number of rows and colums
-# print(diabetes_dataset.shape)
-# print(diabetes_dataset.describe())
-# print(diabetes_dataset['Outcome'].value_counts())
 # 0-->Non-diabetic
 # 1--> Diabetic 
-# print(diabetes_dataset.groupby('Outcome').mean())
 # separating labels and data
 X=diabetes_dataset.drop(columns='Outcome',axis=1)
 Y=diabetes_dataset['Outcome']
-# print(X)
-# print(Y)
 # Data Standarization 
 scalar=StandardScaler()
 scalar.fit(X)
@@ -30,8 +21,6 @@ standardized_data=scalar.transform(X)
 # print(standardized_data)
 X=standardized_data
 Y=diabetes_dataset['Outcome']
-# print(X)
-# print(Y)
 X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.2,stratify=Y,random_state=2)
 print(X.shape,X_train.shape,X_test.shape)
 classifier=svm.SVC(kernel='linear')
